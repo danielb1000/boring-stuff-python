@@ -14,7 +14,7 @@ def regex_strip(string: str, chars_to_remove: str = None) -> str:
         escaped_chars = re.escape(chars_to_remove)
 
         # this pattern removes whitespaces along with the provided chars_to_remove
-        pattern = f'^[\s{escaped_chars}]+|[\s{escaped_chars}]+$'
+        pattern = fr'^[\s{escaped_chars}]+|[\s{escaped_chars}]+$'
 
     return re.sub(pattern, '', string)
 

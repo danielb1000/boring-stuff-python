@@ -51,7 +51,7 @@ for date_string in date_strings:
     
     # otherwise, match returns None    
     if match:
-        # day, month, year = map(int, match.groups()) 
+        # ignore this::::::::::::::::: day, month, year = map(int, match.groups()) 
         # convert strings to ints
         # "01" will become 1, etc. necessary for the is_valid_date function
         # match.groups() returns stuff like ->>> ('31', '12', '2020')
