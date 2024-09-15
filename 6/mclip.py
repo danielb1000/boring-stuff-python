@@ -12,10 +12,10 @@ or
 ->> mclip agree
 or
 ->> mclip upsell
+note the "mclip" we call in the Run window refers to the batch file
 """
 
 import sys
-import time
 import pyperclip
 
 TEXT = {
@@ -25,11 +25,8 @@ TEXT = {
 }
 
 # sys,argv are the arguments we put in the run window
-# sys.argv[0] is the file.bat
-# sys.argv[1] will, in good usage be any key from the TEXT dict
-# 
 if len(sys.argv) < 2:
-    print("Usage: py mclip.py [keyphrase] - copy phrase text")
+    print("Usage: mclip [keyphrase] - copy phrase text")
     sys.exit()
 
 keyphrase = sys.argv[1]  # first command line arg is the keyphrase
@@ -39,5 +36,4 @@ if keyphrase in TEXT:
     print("Text for " + keyphrase + " copied to clipboard.")
 else:
     print("There is no text for " + keyphrase)
-time.sleep(10)
 
