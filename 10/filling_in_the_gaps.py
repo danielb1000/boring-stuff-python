@@ -14,7 +14,7 @@ from pathlib import Path
 from tkinter import filedialog
 from tkinter import simpledialog
 
-# we want to pick an example file and retrieve its directory aswell as its extension
+# we want to pick an example file 
 def choose_file_to_search():
     root = tk.Tk() # 
     root.withdraw # hide window
