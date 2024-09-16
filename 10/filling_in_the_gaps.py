@@ -56,11 +56,11 @@ def find_missing(abs_file: Path, prefix: str):
         # to find missing numbers
         # subtract the ones that exist from the expected
         # turning the list into a set() makes subracting them possible
-        missing_numbers = list(set(expected_nums) - set(numbers))
+        missing_numbers = set(expected_nums) - set(numbers)
         
         if missing_numbers:
             # print(f"Missing files: {', '.join(f'{prefix}{num:03d}.txt' for num in sorted(missing_numbers))}")
-            print (f"Missing numbers: {", ".join(str(num) for num in missing_numbers)}")
+            print (f"Missing numbers: {", ".join(str(num) for num in sorted(missing_numbers))}")
         else:
             print("No files are missing in the sequence.")
     else:
