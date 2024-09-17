@@ -1,7 +1,7 @@
 import os
 import tkinter as tk
 from tkinter import filedialog
-from tkinter import scrolledtext
+from tkinter import scrolledtext 
 
 size_threshold = 10 * 1024 * 1024  # 10 MB in bytes
 
@@ -17,6 +17,7 @@ def select_folder():
 # returns list of absolute path of every file over the size limit
 def find_large_files(main_folder, size_limit):
     result = []
+    # this loop iterates over each directory and its contents. folders represents the current directory being processed
     for folders, subfolders, files in os.walk(main_folder):
         for file in files:
             file_path = os.path.join(folders, file)
